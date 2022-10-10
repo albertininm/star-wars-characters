@@ -1,14 +1,9 @@
 import config from '../app.config';
-import { parseParams, QueryParamsType } from '../utils/url';
 
-export const peopleUrls = {
-  people: (characterId: string) => buildUrlWithParams(`${config.baseApiEndpoint}/api/people/`, {search: characterId}),
-  films: (filmId: string) => buildUrlWithParams(`${config.baseApiEndpoint}/api/films/`, {search: filmId}),
-  planets: (planetId: string) => buildUrlWithParams(`${config.baseApiEndpoint}/api/planets/`, {search: planetId}),
+type Collections = 'people' | 'films' | 'planets';
+
+export const apiUrls: Record<Collections, (id: string) => string> = {
+  people: (peopleId) => `${config.baseApiEndpoint}/people/?search=${peopleId}`,
+  films: (filmId) => `${config.baseApiEndpoint}/films/?search=${filmId}`,
+  planets: (planetId) => `${config.baseApiEndpoint}/planets/?search=${planetId}`,
 };
-
-export function buildUrlWithParams(url: string, params: QueryParamsType) {
-  const parsedParams = parseParams(params);
-
-  return `${url}?${parsedParams}`;
-}

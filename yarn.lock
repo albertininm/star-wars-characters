@@ -2303,7 +2303,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^5.5.0":
+"@typescript-eslint/eslint-plugin@^5.40.0", "@typescript-eslint/eslint-plugin@^5.5.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.40.0.tgz#0159bb71410eec563968288a17bd4478cdb685bd"
   integrity sha512-FIBZgS3DVJgqPwJzvZTuH4HNsZhHMa9SjxTKAZTlMsPw/UzpEjcf9f4dfgDJEHjK+HboUJo123Eshl6niwEm/Q==
@@ -2324,7 +2324,7 @@
   dependencies:
     "@typescript-eslint/utils" "5.40.0"
 
-"@typescript-eslint/parser@^5.5.0":
+"@typescript-eslint/parser@^5.40.0", "@typescript-eslint/parser@^5.5.0":
   version "5.40.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-5.40.0.tgz#432bddc1fe9154945660f67c1ba6d44de5014840"
   integrity sha512-Ah5gqyX2ySkiuYeOIDg7ap51/b63QgWZA7w6AHtFrag7aH0lRQPbLzUjk0c9o5/KZ6JRkTTDKShL4AUrQa6/hw==
@@ -4216,7 +4216,7 @@ eslint-plugin-react-hooks@^4.3.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0.tgz#4c3e697ad95b77e93f8646aaa1630c1ba607edd3"
   integrity sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==
 
-eslint-plugin-react@^7.27.1:
+eslint-plugin-react@^7.27.1, eslint-plugin-react@^7.31.9:
   version "7.31.9"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.31.9.tgz#7474ad4e21db368f61d17e1f2e78d43dbbdd50b2"
   integrity sha512-vrVJwusIw4L99lyfXjtCw8HWdloajsiYslMavogrBe2Gl8gr95TJsJnOMRasN4b4N24I3XuJf6aAV6MhyGmjqw==
@@ -4287,7 +4287,7 @@ eslint-webpack-plugin@^3.1.1:
     normalize-path "^3.0.0"
     schema-utils "^4.0.0"
 
-eslint@^8.3.0:
+eslint@^8.25.0, eslint@^8.3.0:
   version "8.25.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.25.0.tgz#00eb962f50962165d0c4ee3327708315eaa8058b"
   integrity sha512-DVlJOZ4Pn50zcKW5bYH7GQK/9MsoQG2d5eDH0ebEkE8PbgzTTmtt/VTH9GGJ4BfeZCpBLqFfvsjX35UacUL83A==

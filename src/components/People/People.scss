@@ -1,0 +1,59 @@
+@import "../../globals.scss";
+
+.people {
+  align-items: center;
+  background: $gray-300;
+  border: 1px solid $gray-500;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px;
+  height: 150px;
+  width: 110px;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:not(:first-child) {
+    margin-top: 6px;
+  }
+
+  .avatar {
+    color: $gray-800;
+  }
+
+  .info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    max-width: 100%;
+
+    .name {
+      color: $gray-800;
+      font-size: 15px;
+      text-align: center;
+      font-weight: $fw-semibold;
+      margin-bottom: 6px;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+  
+    .species {
+      margin-top: 6px;
+      display: flex;
+      
+      .specie:not(:first-child) {
+        margin-left: 3px;
+      }
+    }
+
+    .homeworld {
+      margin-top: 6px;
+    }
+  }
+
+}
+

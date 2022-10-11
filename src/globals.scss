@@ -1,0 +1,37 @@
+// Font Weight
+$fw-bold: 700;
+$fw-semibold: 600;
+$fw-medium: 500;
+$fw-normal: 400;
+
+// Gray
+$gray-default: #272833;
+$gray-000: #F9F9F9;
+$gray-100: #F0F0F1;
+$gray-200: #E9EAEB;
+$gray-300: #DFDFE0;
+$gray-400: #D4D4D6;
+$gray-500: #BEBFC2;
+$gray-600: #A9A9AD;
+$gray-700: #7D7E85;
+$gray-800: #52535C;
+$gray-900: #3D3E47;
+
+// White
+$white-default: #FFFFFF;
+$white-000: #FFFFFF08;
+$white-100: #FFFFFF12;
+$white-200: #FFFFFF1A;
+$white-300: #FFFFFF26;
+$white-400: #FFFFFF33;
+$white-500: #FFFFFF4D;
+$white-600: #FFFFFF66;
+$white-700: #FFFFFF99;
+$white-800: #FFFFFFCC;
+$white-900: #FFFFFFE6;
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

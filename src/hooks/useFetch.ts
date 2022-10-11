@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const useFetch = <ResultType>(url: string) => {
   const [error, setError] = useState<unknown>(null);
@@ -15,13 +14,13 @@ const useFetch = <ResultType>(url: string) => {
 
       try {
         const response = await fetch(url);
-        const {results, next, previous, total} = await response.json();
+        const { results, next, previous, total } = await response.json();
 
         setResults(results);
         setNextUrl(next);
         setPreviousUrl(previous);
         setTotal(total);
-      } catch(error) {
+      } catch (error) {
         setError(error);
       } finally {
         setLoading(false);
@@ -31,7 +30,7 @@ const useFetch = <ResultType>(url: string) => {
     triggerRequest();
   }, [url]);
 
-  return {error, loading, nextUrl, previousUrl, results, total};
+  return { error, loading, nextUrl, previousUrl, results, total };
 };
 
 export default useFetch;

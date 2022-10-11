@@ -1,7 +1,6 @@
-import { apiUrls } from '@/helpers/urls';
-import { Film } from '@/types';
-import useDebounce from './useDebounce';
-import useFetch from './useFetch';
+import { apiUrls } from '../helpers/urls';
+import { Film } from '../types';
+import { useDebounce, useFetch } from '../hooks';
 
 const useFetchFilms = (search: string) => {
   const debouncedSearch = useDebounce(search);

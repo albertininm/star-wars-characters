@@ -17,18 +17,15 @@ $gray-700: #7D7E85;
 $gray-800: #52535C;
 $gray-900: #3D3E47;
 
-// White
-$white-default: #FFFFFF;
-$white-000: #FFFFFF08;
-$white-100: #FFFFFF12;
-$white-200: #FFFFFF1A;
-$white-300: #FFFFFF26;
-$white-400: #FFFFFF33;
-$white-500: #FFFFFF4D;
-$white-600: #FFFFFF66;
-$white-700: #FFFFFF99;
-$white-800: #FFFFFFCC;
-$white-900: #FFFFFFE6;
+// Yellow
+$yellow-default: '#FFB702';
+$yellow-100: '#FFF8E5';
+$yellow-200: '#FFF2CA';
+$yellow-300: '#FFE395';
+$yellow-500: '#FFC618';
+$yellow-700: '#7E6217';
+$yellow-800: '#524527';
+
 
 .truncate {
   overflow: hidden;
@@ -37,10 +34,11 @@ $white-900: #FFFFFFE6;
 }
 
 // Hashable colors
-$hash-green: #22B40E;
-$hash-red: #C21431;
-$hash-purple: #9030BD;
-$hash-blue: #415FDC;
-$hash-yellow: #ADAC4D;
-$hash-orange: #BD9030;
-$hash-gray: $gray-600;
+$app-black: #000;
+$app-green: #22B40E;
+$app-red: #C21431;
+$app-purple: #A729FF;
+$app-blue: #415FDC;
+$app-yellow: #F2FF29;
+$app-orange: #FF9429;
+$app-gray: $gray-600;

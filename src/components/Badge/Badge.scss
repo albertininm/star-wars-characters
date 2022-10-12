@@ -1,47 +1,49 @@
 @import '../../globals.scss';
 
 .badge {
+  align-items: center;
+  border: 1px solid $gray-600;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0 2px;
   font-size: 7px;
   font-weight: $fw-semibold;
+  padding: 0 2px;
   max-width: 100%;
+;
 
   &.green {
-    color: $hash-green;
-    border: 1px solid $hash-green;
+    color: $app-green;
+    border-color: $app-green;
   }
 
   &.red {
-    color: $hash-red;
-    border: 1px solid $hash-red;
+    color: $app-red;
+    border-color: $app-red;
   }
 
   &.purple {
-    color: $hash-purple;
-    border: 1px solid $hash-purple;
+    color: $app-purple;
+    border-color: $app-purple;
   }
 
   &.blue {
-    color: $hash-blue;
-    border: 1px solid $hash-blue;
+    color: $app-blue;
+    border-color: $app-blue;
   }
 
   &.yellow {
-    color: $hash-yellow;
-    border: 1px solid $hash-yellow;
+    color: $app-yellow;
+    border-color: $app-yellow;
   }
 
   &.orange {
-    color: $hash-orange;
-    border: 1px solid $hash-orange;
+    color: $app-orange;
+    border-color: $app-orange;
   }
 
   &.gray {
-    color: $hash-gray;
-    border: 1px solid $hash-gray;
+    color: $app-gray;
+    border-color: $app-gray;
   }
 }

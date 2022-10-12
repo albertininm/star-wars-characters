@@ -2,6 +2,7 @@ import React from 'react';
 import { People as PeopleProps } from 'types';
 import './People.scss';
 import Avatar from '../Avatar/Avatar';
+import Badge from 'components/Badge/Badge';
 
 const People: React.FC<React.PropsWithChildren<PeopleProps>> = ({
   name,
@@ -16,11 +17,11 @@ const People: React.FC<React.PropsWithChildren<PeopleProps>> = ({
         {species.length > 0 && (
           <div className="species">
             {
-              [...species, ...species].map((specie, i) => <div key={i} className="specie">{specie}</div>)
+              species.map((specie, i) => <Badge key={i} className="specie" content={specie} />)
             }
           </div>
         )}
-        <div className="homeworld">{homeworld}</div>
+        <div className="homeworld"><Badge content={homeworld}/></div>
       </div>
     </div>
   );

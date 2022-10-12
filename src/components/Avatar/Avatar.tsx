@@ -4,12 +4,12 @@ import './Avatar.scss';
 import cx from 'classnames';
 
 interface AvatarProps {
-  classNames?: string;
+  className?: string;
   name: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({classNames, name}) => {
-  const classes = cx('avatar', classNames);
+const Avatar: React.FC<AvatarProps> = ({className, name}) => {
+  const classes = cx('avatar', className);
 
   const initials = getInitialsFromName(name);
 

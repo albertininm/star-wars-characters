@@ -8,16 +8,21 @@
   display: flex;
   flex-direction: column;
   padding: 8px 6px;
-  height: 150px;
-  width: 110px;
-  transition: opacity 0.2s ease-in-out;
+  height: 170px;
+  width: 180px;
+  transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  overflow: hidden;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.7;
+    box-shadow:
+      0 0 12px -3px rgba($gray-default, 0.2),
+      0 6px 12px -6px rgba($gray-default, 0.2);
   }
 
   &:not(:first-child) {
-    margin-top: 6px;
+    margin-left: 6px;
+    
   }
 
   .avatar {
@@ -32,26 +37,13 @@
     max-width: 100%;
 
     .name {
-      color: $gray-800;
+      color: $gray-700;
       font-size: 15px;
       text-align: center;
       font-weight: $fw-semibold;
       margin-bottom: 6px;
       max-width: 100%;
       white-space: nowrap;
-    }
-  
-    .species {
-      margin-top: 6px;
-      display: flex;
-      
-      .specie:not(:first-child) {
-        margin-left: 3px;
-      }
-    }
-
-    .homeworld {
-      margin-top: 6px;
     }
   }
 

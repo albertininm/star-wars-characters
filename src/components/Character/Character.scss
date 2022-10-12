@@ -1,6 +1,6 @@
 @import "../../globals.scss";
 
-.people {
+.character {
   align-items: center;
   background: $gray-300;
   border: 1px solid $gray-500;
@@ -39,10 +39,10 @@
     max-width: 100%;
 
     .name {
-      color: $gray-700;
+      color: $gray-800;
       font-size: 13px;
       text-align: center;
-      font-weight: $fw-semibold;
+      font-weight: $fw-bold;
       margin-bottom: 6px;
       max-width: 100%;
       white-space: nowrap;

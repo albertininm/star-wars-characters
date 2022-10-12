@@ -7,10 +7,12 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  padding: 8px 6px;
-  height: 170px;
-  width: 180px;
+  padding: 8px 3px;
+  height: 140px;
+  width: 110px;
+  min-width: 110px;
   transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  scroll-snap-align: center;
   overflow: hidden;
 
   &:hover {
@@ -38,7 +40,7 @@
 
     .name {
       color: $gray-700;
-      font-size: 15px;
+      font-size: 13px;
       text-align: center;
       font-weight: $fw-semibold;
       margin-bottom: 6px;

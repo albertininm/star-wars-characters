@@ -1,0 +1,10 @@
+@import '../People.scss';
+
+.species {
+  text-align: center;
+
+  .title {
+    font-size: 10px;
+    color: $gray-700;
+  }
+}

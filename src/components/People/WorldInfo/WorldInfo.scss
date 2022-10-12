@@ -1,0 +1,30 @@
+@import "../../../globals.scss";
+
+.home-world {
+  margin-top: 6px;
+  
+  .title {
+    text-align: center;
+    font-size: 10px;
+    color: $gray-700;
+  }
+
+  .content {
+    align-items: center;
+    color: $gray-800;
+    display: flex;
+    
+    .world-name {
+      margin-left: 6px;
+      line-height: 18px;
+    }
+  
+    .world-population {
+      margin-left: 3px;
+      color: $gray-600;
+      font-size: 10px;;
+      line-height: 18px;
+    }
+  }
+}
+

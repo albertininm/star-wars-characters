@@ -1,4 +1,5 @@
-import People from 'components/People/People';
+import Movie from 'components/Movie/Movie';
+import Character from 'components/Character/Character';
 import React from 'react';
 import { useState } from 'react';
 import './App.scss';
@@ -17,9 +18,12 @@ function App() {
       <div>App Body</div>
       <input onChange={(e) => setInputText(e.target.value)} type="text"></input>
       <div className="characters-wrapper">
-        {people.map((item) => (
-          <People {...item} key={item.name} />
-        ))}
+        <Movie/>
+        <Character name='Yoda' homeworld='Earth' species={['Human']}/>
+        {/* {people.length > 0 && people.map((item) => (
+          // <Character {...item} key={item?.name} />
+          <Movie {...item} key={item?.name} />
+        ))} */}
       </div>
     </div>
   );

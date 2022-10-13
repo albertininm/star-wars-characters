@@ -15,7 +15,7 @@ const Character: React.FC<CharacterProps> = ({
       <Avatar name={name} />
       <div className="info">
         <div className="name truncate">{name}</div>
-        <SpeciesInfo species={['Humani', 'German']} />
+        <SpeciesInfo species={['Humap', 'Germae']} />
         <WorldInfo name="Earth" population="120.000" />
       </div>
     </div>

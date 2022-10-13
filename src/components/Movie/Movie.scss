@@ -4,7 +4,7 @@
   border-radius: 8px;
   border: 1px solid $gray-600;
   position: relative;
-  background-image: linear-gradient(to bottom right, $gray-100, $gray-400);
+  background-image: linear-gradient(to bottom right, $gray-900, $gray-default);
   padding: 6px 6px;
   height: 150px;
   width: 200px;
@@ -21,7 +21,7 @@
     font-size: 72px;
     line-height: 56px;
     font-weight: $fw-bold;
-    color: rgba($app-red, 0.1);
+    color: rgba($app-yellow, 0.2);
     z-index: 2;
   }
 
@@ -31,8 +31,8 @@
     flex-direction: column;
     justify-content: center;
     font-size: 32px;
-    color: $gray-800;
-    font-weight: $fw-medium;
+    color: $gray-400;
+    font-weight: $fw-bold;
     text-align: center;
     height: 50%;
   }
@@ -49,12 +49,12 @@
 
       .release-info__title {
         font-size: 9px;
-        color: $gray-600;
+        color: $gray-500;
       }
       
       .release-info__date {
         white-space: nowrap;
-        color: $gray-800;
+        color: $gray-200;
         font-size: 11px;
       }
     }
@@ -62,9 +62,9 @@
     .sinopse {
       max-width: 50%;
       font-size: 8px;
-      color: $gray-800;
+      color: $gray-500;
       font-weight: $fw-medium;
-      text-align:justify;
+      text-align: justify;
     }
   }
 }

@@ -1,11 +1,14 @@
 @import "./globals.scss";
 
 .characters-wrapper {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth
 }
 
 body {
-  background: $gray-200;
+  background: #000;
 }

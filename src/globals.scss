@@ -42,3 +42,25 @@ $app-blue: #3c63ff;
 $app-yellow: #F2FF29;
 $app-orange: #FF9429;
 $app-gray: $gray-600;
+
+$font-tiny: 7px;
+$font-small: 9px;
+$font-small-normal: 11px;
+$font-normal: 13px;
+$font-medium: 15px;
+$font-medium-large: 17px;
+$font-large: 23px;
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

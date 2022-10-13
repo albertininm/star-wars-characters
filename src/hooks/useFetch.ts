@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
 
-const useFetch = <ResultType>(url: string) => {
+const useFetch = <DataType>(url: string) => {
   const [error, setError] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
-  const [nextUrl, setNextUrl] = useState<string>('');
-  const [previousUrl, setPreviousUrl] = useState<string>('');
-  const [results, setResults] = useState<ResultType[]>([]);
-  const [total, setTotal] = useState(0);
+  const [data, setData] = useState<DataType>();
 
   useEffect(() => {
     const triggerRequest = async () => {
@@ -14,12 +11,9 @@ const useFetch = <ResultType>(url: string) => {
 
       try {
         const response = await fetch(url);
-        const { results, next, previous, total } = await response.json();
+        const responseData = await response.json() as DataType;
 
-        setResults(results);
-        setNextUrl(next);
-        setPreviousUrl(previous);
-        setTotal(total);
+        setData(responseData);
       } catch (error) {
         setError(error);
       } finally {
@@ -30,7 +24,7 @@ const useFetch = <ResultType>(url: string) => {
     triggerRequest();
   }, [url]);
 
-  return { error, loading, nextUrl, previousUrl, results, total };
+  return { error, loading, data };
 };
 
 export default useFetch;

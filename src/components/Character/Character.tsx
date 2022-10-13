@@ -1,21 +1,26 @@
 import React from 'react';
-import { People as CharacterProps } from 'types';
 import './Character.scss';
 import Avatar from '../Avatar/Avatar';
 import WorldInfo from './WorldInfo/WorldInfo';
 import SpeciesInfo from './SpeciesInfo/SpeciesInfo';
 
+interface CharacterProps {
+  name: string;
+  homeWorldUrl: string;
+  speciesUrls: string[];
+}
+
 const Character: React.FC<CharacterProps> = ({
   name,
-  homeworld,
-  species,
+  homeWorldUrl,
+  speciesUrls,
 }) => {
   return (
     <div className="character">
       <Avatar name={name} />
       <div className="info">
-        <div className="name truncate">{name}</div>
-        <SpeciesInfo species={['Humap', 'Germae']} />
+        <div className="name truncate" title={name}>{name}</div>
+        <SpeciesInfo speciesUrls={speciesUrls} />
         <WorldInfo name="Earth" population="120.000" />
       </div>
     </div>

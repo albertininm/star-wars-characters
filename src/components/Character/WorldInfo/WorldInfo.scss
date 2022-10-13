@@ -2,30 +2,34 @@
 
 .home-world {
   margin-top: 6px;
+  max-width: 100%;
   
   .title {
     text-align: center;
-    font-size: 7px;
-    color: $gray-600;
+    margin-top: 2px;
   }
 
   .content {
     align-items: center;
-    color: $gray-600;
+    align-content: center;
+    justify-content: center;
     display: flex;
+    color: $gray-600;
+    max-width: 100%;
     
     .world-name {
-      font-size: 9px;
+      color: $gray-300;
+      font-size: $font-medium-large;
       font-weight: $fw-semibold;
       margin-left: 6px;
-      line-height: 13px;
+      line-height: 23px;
     }
   
     .world-population {
-      margin-left: 3px;
+      margin-left: 6px;
       color: $gray-600;
-      font-size: 6px;
-      line-height: 13px;
+      font-size: $font-small-normal;
+      line-height: 15px;
     }
   }
 }

@@ -1,18 +1,20 @@
-import Badge from 'components/Badge/Badge';
 import React from 'react';
+import SpecieItem from '../SpecieItem/SpecieItem';
 import './SpeciesList.scss';
 
 interface SpeciesList {
-  species: string[];
+  speciesUrls: string[];
 }
 
-const SpeciesList: React.FC<SpeciesList> = ({species = []}) => {
+const SpeciesList: React.FC<SpeciesList> = ({speciesUrls = []}) => {
+  if(speciesUrls.length === 0) {
+    return <SpecieItem.Unknown />;
+  }
+
   return (
-    species.length > 0 ? (
-      <div className="list">
-        {species.map(specie => <Badge key={specie} content={specie} />)}
-      </div>
-    ) : (<Badge content="Unknown" color="gray" />)
+    <div className="list">
+      {speciesUrls.map(specieUrl => <SpecieItem key={specieUrl} url={specieUrl} />)}
+    </div>
   );
 };
 

@@ -3,17 +3,17 @@ import SpeciesList from './SpeciesList/SpeciesList';
 import './SpeciesInfo.scss';
 
 interface SpeciesInfoProps {
-  species: string[];
+  speciesUrls: string[];
 }
 
-const SpeciesInfo: React.FC<SpeciesInfoProps> = ({species}) => {
+const SpeciesInfo: React.FC<SpeciesInfoProps> = ({speciesUrls}) => {
   return (
     <div className="species">
       <div className="title">
         Species:
       </div>
       <div className="content">
-        <SpeciesList species={species} />
+        <SpeciesList speciesUrls={speciesUrls} />
       </div>
     </div>
   );

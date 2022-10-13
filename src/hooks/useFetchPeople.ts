@@ -1,11 +1,11 @@
 import { People } from '../types';
 import { apiUrls } from '../helpers/urls';
-import { useDebounce, useFetch } from '../hooks';
+import { useDebounce, useFetchSearch } from '../hooks';
 
 const useFetchPeople = (search: string) => {
   const debouncedSearch = useDebounce(search);
 
-  return useFetch<People>(apiUrls.people(debouncedSearch));
+  return useFetchSearch<People>(apiUrls.people(debouncedSearch));
 };
 
 export default useFetchPeople;

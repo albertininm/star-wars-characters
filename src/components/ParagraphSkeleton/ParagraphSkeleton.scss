@@ -1,0 +1,21 @@
+@import '../../globals.scss';
+
+.paragraph-skeleton {
+  animation: pulse 0.9s linear infinite;
+  background: $gray-300;
+
+  &.thin {
+    height: 3px;
+    border-radius: 7px;
+  }
+  
+  &.medium {
+    height: 15px;
+    border-radius: 15px;
+  }
+  
+  &.thick {
+    height: 25px;
+    border-radius: 25px;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../Movie.scss';
+
+.release-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .release-info__title {
+    font-size: 9px;
+    color: $gray-500;
+  }
+  
+  .release-info__date {
+    color: $gray-200;
+    font-weight: $fw-medium;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}

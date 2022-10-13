@@ -35,6 +35,8 @@
     font-weight: $fw-bold;
     text-align: center;
     height: 50%;
+    margin: 0;
+    padding: 0;
   }
 
   .details {
@@ -59,12 +61,14 @@
       }
     }
     
-    .sinopse {
+    .synopsis {
       max-width: 50%;
       font-size: 8px;
       color: $gray-500;
       font-weight: $fw-medium;
       text-align: justify;
+      margin: 0;
+      padding: 0;
     }
   }
 }

@@ -1,15 +1,24 @@
+import { getFormattedDate } from 'helpers/date';
 import React from 'react';
 import './Movie.scss';
 import ReleaseDate from './ReleaseDate/ReleaseDate';
 
-const Movie: React.FC = () => {
+interface MovieProps {
+  releaseDate: string;
+  title: string;
+  synopsis: string;
+}
+
+const Movie: React.FC<MovieProps> = ({releaseDate, synopsis, title}) => {
+  const {date, year} = getFormattedDate(releaseDate);
+
   return (
     <div className="movie">
-      <div className="release-year">1997</div>
-      <div className="title">A New Hope</div>
+      <div className="release-year">{year}</div>
+      <h4 className="title">{title}</h4>
       <div className="details">
-        <ReleaseDate date="May 27, 1997" />
-        <div className="sinopse">It is a period of civil war.Rebel spaceships, strikingfrom a hidden base, have wontheir first victory againstthe evil Galactic Empire.During the battle...</div>
+        <ReleaseDate date={date} />
+        <p className="synopsis">{synopsis}</p>
       </div>
     </div>
   );

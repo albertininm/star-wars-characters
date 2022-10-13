@@ -9,6 +9,12 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "overrides": [
+        {
+            "files": ["**/*.tsx"],
+            "rules": {
+                "react/prop-types": 0
+            }
+        }
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {

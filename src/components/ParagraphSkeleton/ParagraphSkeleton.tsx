@@ -5,14 +5,16 @@ import './ParagraphSkeleton.scss';
 type ParagraphSkeletonVariation = 'thin' | 'medium' | 'thick';
 
 interface ParagraphSkeleton {
+  className ?: string;
+  style ?: React.CSSProperties;
   variation ?: ParagraphSkeletonVariation;
-  width?: number;
+  width ?: number;
 }
 
-const ParagraphSkeleton: React.FC<ParagraphSkeleton> = ({variation = 'medium', width = 30}) => {
-  const classes = cx('paragraph-skeleton', variation);
+const ParagraphSkeleton: React.FC<ParagraphSkeleton> = ({className, variation = 'medium', width = 30, style}) => {
+  const classes = cx('paragraph-skeleton', className, variation);
 
-  return <div className={classes} style={{width}}/>;
+  return <div className={classes} style={{width, ...style}}/>;
 };
 
 export default ParagraphSkeleton;

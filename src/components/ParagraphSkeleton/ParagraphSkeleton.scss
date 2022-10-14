@@ -3,19 +3,20 @@
 .paragraph-skeleton {
   animation: pulse 0.9s linear infinite;
   background: $gray-300;
+  line-height: 18px;
 
   &.thin {
-    height: 3px;
-    border-radius: 7px;
+    height: 4px;
+    border-radius: 12px;
   }
   
   &.medium {
-    height: 15px;
-    border-radius: 15px;
+    height: 8px;
+    border-radius: 16px;
   }
   
   &.thick {
-    height: 25px;
-    border-radius: 25px;
+    height: 10px;
+    border-radius: 20px;
   }
 }

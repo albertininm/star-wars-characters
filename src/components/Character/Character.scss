@@ -35,7 +35,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 12px;
+    margin-top: 10px;
     max-width: 100%;
     width: 100%;
 
@@ -52,8 +52,16 @@
     .title {
       color: $gray-400;
       font-size: $font-normal;
+      text-align: center;
     }
   }
 
+
+  .separator {
+    width: 100%;
+    border: 1px solid $gray-500;
+    border-bottom: none;
+    border-width: 1px;
+  }
 }
 

@@ -1,36 +1,40 @@
 @import "../Character.scss";
 
 .home-world {
-  margin-top: 6px;
+  margin-top: 8px;
   max-width: 100%;
-  
-  .title {
-    text-align: center;
-    margin-top: 2px;
-  }
+  width: 100%;
 
   .content {
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    display: flex;
-    color: $gray-600;
     max-width: 100%;
     
-    .world-name {
-      color: $gray-300;
-      font-size: $font-medium-large;
-      font-weight: $fw-semibold;
-      margin-left: 6px;
-      line-height: 23px;
-    }
-  
-    .world-population {
-      margin-left: 6px;
+    
+    .text-content {
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
       color: $gray-600;
-      font-size: $font-small-normal;
-      line-height: 15px;
+
+      margin-top: 3px;
+      text-align: center;
+      // margin-left: 3px; this is for globe icon
+
+      .world-name {
+        color: $gray-300;
+        font-size: $font-medium;
+        font-weight: $fw-bold;
+        margin-left: 6px;
+      }
+      
+      .world-population {
+        margin-left: 6px;
+        color: $gray-600;
+        font-size: $font-small-normal;
+      }
     }
+    
   }
 }
 

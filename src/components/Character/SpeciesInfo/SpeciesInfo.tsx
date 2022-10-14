@@ -10,7 +10,7 @@ const SpeciesInfo: React.FC<SpeciesInfoProps> = ({speciesUrls}) => {
   return (
     <div className="species">
       <div className="title">
-        Species:
+        Species
       </div>
       <div className="content">
         <SpeciesList speciesUrls={speciesUrls} />

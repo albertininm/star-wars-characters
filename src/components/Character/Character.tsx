@@ -20,8 +20,9 @@ const Character: React.FC<CharacterProps> = ({
       <Avatar name={name} />
       <div className="info">
         <div className="name truncate" title={name}>{name}</div>
+        {/* <hr className="separator" /> */}
         <SpeciesInfo speciesUrls={speciesUrls} />
-        <WorldInfo name="Earth" population="120.000" />
+        <WorldInfo name="Earth" population="120.000" homeWorldUrl={homeWorldUrl} />
       </div>
     </div>
   );

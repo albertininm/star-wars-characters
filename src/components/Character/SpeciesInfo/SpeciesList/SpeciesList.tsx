@@ -6,16 +6,12 @@ interface SpeciesList {
   speciesUrls: string[];
 }
 
-const SpeciesList: React.FC<SpeciesList> = ({speciesUrls = []}) => {
-  if(speciesUrls.length === 0) {
-    return <SpecieItem.Unknown />;
-  }
+const SpeciesList: React.FC<SpeciesList> = ({speciesUrls = []}) => (
+  <div className="list">
+    {speciesUrls.length > 0 ?
+      (speciesUrls.map(specieUrl => <SpecieItem key={specieUrl} url={specieUrl} />)) : (<SpecieItem.Unknown />)}
+  </div>
+);
 
-  return (
-    <div className="list">
-      {speciesUrls.map(specieUrl => <SpecieItem key={specieUrl} url={specieUrl} />)}
-    </div>
-  );
-};
 
 export default SpeciesList;

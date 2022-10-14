@@ -1,5 +1,3 @@
-import Globe from 'components/Globe/Globe';
-import ParagraphSkeleton from 'components/ParagraphSkeleton/ParagraphSkeleton';
 import { useFetch } from 'hooks';
 import React from 'react';
 import { Planet } from 'types';
@@ -19,15 +17,13 @@ const WorldInfo: React.FC<WorldInfoProps> = ({homeWorldUrl}) => {
     <div className="home-world">
       <div className="title">Home Planet</div>
       <div className="content" title="Home planet">
-        {/* <Globe /> */}
-
         <div className="text-content">
           {loading ? (
             <WorldData.Skeleton />
           ) : (
             <WorldData
               name={data?.name}
-              population={Number(data?.population).toLocaleString()}
+              population={Number(data?.population)}
             />
           )}
         </div>

@@ -1,5 +1,8 @@
 import ParagraphSkeleton from 'components/ParagraphSkeleton/ParagraphSkeleton';
+import { Colors, getColorFromText } from 'helpers/colors';
 import React from 'react';
+import cx from 'classnames';
+import Globe from 'components/Globe/Globe';
 
 const WorldDataSkeleton: React.FC = () => (
   <>
@@ -10,21 +13,36 @@ const WorldDataSkeleton: React.FC = () => (
 
 interface WorldDataProps {
   name?: string;
-  population?: string;
+  population?: number;
 }
 
 interface WorldDataInterface extends React.FC<WorldDataProps> {
   Skeleton: typeof WorldDataSkeleton;
 }
 
-const WorldData: WorldDataInterface = ({name, population}) => {
-  const formattedPopulation = `${population} hab`;
+const WorldData: WorldDataInterface = ({name = '', population = 0}) => {
+  let formattedPopulation;
+
+  if(Number.isNaN(population)) {
+    formattedPopulation = 'Unknown';
+  } else {
+    formattedPopulation = `${population.toLocaleString()} hab`;
+  }
+
+  const planetColor = getColorFromText(name);
+
+  const classes = cx('world-data', planetColor);
 
   return (
-    <>
-      <div className="world-name truncate" title={name}>{name}</div>
+    <div className={classes}>
+      <div className="name-wrapper">
+        <Globe />
+        <div className="world-name truncate" title={name}>
+          {name}
+        </div>
+      </div>
       <div className="world-population truncate" title={formattedPopulation}>{formattedPopulation}</div>
-    </>
+    </div>
   );
 };
 

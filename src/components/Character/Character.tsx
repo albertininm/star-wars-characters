@@ -24,7 +24,7 @@ const Character: React.FC<CharacterProps> = ({
         <div className="name truncate" title={name}>{name}</div>
         {/* <hr className="separator" /> */}
         <SpeciesInfo speciesUrls={speciesUrls} />
-        <WorldInfo name="Earth" population="120.000" homeWorldUrl={homeWorldUrl} />
+        <WorldInfo url={homeWorldUrl} />
       </div>
     </div>
   );

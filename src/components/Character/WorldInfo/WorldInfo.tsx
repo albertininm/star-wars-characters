@@ -1,3 +1,4 @@
+import useDataContext from '../../../contexts/CacheContext/useCacheContext';
 import { useFetch } from 'hooks';
 import React from 'react';
 import { Planet } from 'types';
@@ -5,13 +6,23 @@ import WorldData from './WorldData/WorldData';
 import './WorldInfo.scss';
 
 interface WorldInfoProps {
-  homeWorldUrl: string;
-  name: string;
-  population: string;
+  url: string;
 }
 
-const WorldInfo: React.FC<WorldInfoProps> = ({homeWorldUrl}) => {
-  const {data, loading} = useFetch<Planet>(homeWorldUrl);
+const WorldInfo: React.FC<WorldInfoProps> = ({url}) => {
+
+  const {planets, setPlanet} = useDataContext();
+
+  const cachedPlanet = planets[url];
+
+  const {loading, data} = useFetch<Planet>({url,
+    skip: Boolean(cachedPlanet),
+    onRequestFinish: (planet) => {
+      if(!cachedPlanet) {
+        setPlanet({planet, url});
+      }
+    },
+  });
 
   return (
     <div className="home-world">

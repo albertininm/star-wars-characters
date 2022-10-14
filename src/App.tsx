@@ -6,18 +6,26 @@ import './App.scss';
 import './globals.scss';
 import { useFetchPeople } from './hooks';
 import ParagraphSkeleton from 'components/ParagraphSkeleton/ParagraphSkeleton';
+import { People } from 'types';
 
 function App() {
   const [inputText, setInputText] = useState('');
 
-  const { results: people = [] } = useFetchPeople(inputText);
-
-  // console.log(people);
+  const { results: characters = [] } = useFetchPeople(inputText);
+  const [selectedCharacter, setSelectedCharacter] = useState<People>();
 
   return (
     <div className="App">
       <div>App Body</div>
-      <input onChange={(e) => setInputText(e.target.value)} type="text"></input>
+      <input
+        onChange={(e) => {
+          const searchText = e.target.value;
+
+          setInputText(searchText);
+          setSelectedCharacter(undefined);
+        }}
+        type="text"
+      />
       <div className="characters-wrapper">
         {/* <Movie
           releaseDate="1997-05-25"
@@ -25,7 +33,15 @@ function App() {
           synopsis="It is a period of civil war.Rebel spaceships, strikingfrom a hidden base, have wontheir first victory againstthe evil Galactic Empire.During the battle..."
         /> */}
 
-        {people.map(item => <Character key={item.name} name={item.name} homeWorldUrl={item.homeworld} speciesUrls={item.species} />)}
+        {characters.map(character => 
+          <Character
+            key={character.name}
+            name={character.name}
+            homeWorldUrl={character.homeworld}
+            onClick={() => setSelectedCharacter(character)}
+            speciesUrls={character.species}
+          />
+        )}
         {/* <Character name='Yoda' homeWorldUrl='https://swapi.dev/api/planets/15/' speciesUrls={['https://swapi.dev/api/species/1/', 'https://swapi.dev/api/species/2/']}/> */}
       </div>
     </div>

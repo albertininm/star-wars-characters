@@ -13,7 +13,7 @@
   width: 160px;
   min-width: 160px;
   transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  // scroll-snap-align: center;
+  scroll-snap-align: center;
   overflow: hidden;
 
   &:hover {

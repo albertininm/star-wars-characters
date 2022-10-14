@@ -7,9 +7,10 @@
   margin-top: 30px;
 
   background: $gray-900;
-  // scroll-snap-type: x mandatory;
-  // scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding: 30px 30px;
+  width: 300px;
 }
 
 body {

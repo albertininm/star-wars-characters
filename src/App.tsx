@@ -42,7 +42,7 @@ function App() {
             speciesUrls={character.species}
           />
         )}
-        {/* <Character name='Yoda' homeWorldUrl='https://swapi.dev/api/planets/15/' speciesUrls={['https://swapi.dev/api/species/1/', 'https://swapi.dev/api/species/2/']}/> */}
+        {/* <Character name='Yoda' homeWorldUrl='https://swapi.dev/api/planets/9/' speciesUrls={['https://swapi.dev/api/species/1/', 'https://swapi.dev/api/species/2/']}/> */}
       </div>
     </div>
   );

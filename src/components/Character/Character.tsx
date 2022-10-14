@@ -23,7 +23,7 @@ const Character: React.FC<CharacterProps> = ({
       <div className="info">
         <div className="name truncate" title={name}>{name}</div>
         <SpeciesInfo speciesUrls={speciesUrls} />
-        <WorldInfo name="Earth" population="120.000" homeWorldUrl={homeWorldUrl} />
+        <WorldInfo url={homeWorldUrl} />
       </div>
     </div>
   );

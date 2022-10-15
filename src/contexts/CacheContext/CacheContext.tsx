@@ -1,11 +1,11 @@
 import React, { PropsWithChildren, useCallback, useState } from 'react';
-import { Film, Planet, Specie } from 'types';
+import { Movie, Planet, Specie } from 'types';
 
 interface CacheContextInterface {
   species: Record<string, Specie | undefined>;
   setSpecie: ({specie, url}: {specie?: Specie , url: string}) => void;
-  films: Record<string, Film | undefined>;
-  setFilm: ({film, url}: {film?: Film, url: string}) => void;
+  movies: Record<string, Movie | undefined>;
+  setMovie: ({movie, url}: {movie?: Movie, url: string}) => void;
   planets: Record<string, Planet | undefined>;
   setPlanet: ({planet, url}: {planet?: Planet, url: string}) => void;
 }
@@ -13,19 +13,19 @@ interface CacheContextInterface {
 export const CacheContext = React.createContext<CacheContextInterface>({
   species: {},
   setSpecie: () => null,
-  films: {},
-  setFilm: () => null,
+  movies: {},
+  setMovie: () => null,
   planets: {},
   setPlanet: () => null,
 });
 
 const CacheContextProvider: React.FC<PropsWithChildren> = ({children}) => {
   const [species, setSpecies] = useState<Record<string, Specie | undefined>>({});
-  const [films, setFilms] = useState<Record<string, Film | undefined>>({});
+  const [movies, setMovies] = useState<Record<string, Movie | undefined>>({});
   const [planets, setPlanets] = useState<Record<string, Planet | undefined>>({});
 
-  const setFilm = useCallback(({film, url}: {film?: Film, url: string}) => {
-    setFilms((currFilms) => ({...currFilms, [url]: film}));
+  const setMovie = useCallback(({movie, url}: {movie?: Movie, url: string}) => {
+    setMovies((currmovies) => ({...currmovies, [url]: movie}));
   }, []);
 
   const setSpecie = useCallback(({specie, url}: {specie?: Specie, url: string}) => {
@@ -37,7 +37,7 @@ const CacheContextProvider: React.FC<PropsWithChildren> = ({children}) => {
   }, []);
 
   return (
-    <CacheContext.Provider value={{species, films, planets, setFilm, setPlanet, setSpecie}}>
+    <CacheContext.Provider value={{species, movies, planets, setMovie, setPlanet, setSpecie}}>
       {children}
     </CacheContext.Provider>
   );

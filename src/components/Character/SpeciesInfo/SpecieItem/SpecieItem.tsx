@@ -1,5 +1,5 @@
 import Badge from 'components/Badge/Badge';
-import useDataContext from '../../../../contexts/CacheContext/useCacheContext';
+import useDataContext from 'contexts/CacheContext/useCacheContext';
 import {useFetch} from 'hooks';
 import React from 'react';
 import { Specie } from 'types';

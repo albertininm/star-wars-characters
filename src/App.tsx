@@ -9,6 +9,7 @@ import { People } from 'types';
 import SearchInput from 'components/SearchInput/SearchInput';
 import AppBackground from 'components/AppBackground/AppBackground';
 import LoadingCharactersPlaceholder from 'components/LoadingCharactersPlaceholder/LoadingCharactersPlaceholder';
+import NoCharacterFoundPlaceholder from 'components/NoCharacterFoundPlaceholder/NoCharacterFoundPlaceholder';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -36,14 +37,17 @@ function App() {
             {loading? 
               <LoadingCharactersPlaceholder />
               :
-              characters.map(character => 
-                <Character
-                  key={character.name}
-                  name={character.name}
-                  homeWorldUrl={character.homeworld}
-                  onClick={() => setSelectedCharacter(character)}
-                  speciesUrls={character.species}
-                />)
+
+              (characters.length === 0 ? <NoCharacterFoundPlaceholder /> :
+                characters.map(character => 
+                  <Character
+                    key={character.name}
+                    name={character.name}
+                    homeWorldUrl={character.homeworld}
+                    onClick={() => setSelectedCharacter(character)}
+                    speciesUrls={character.species}
+                  />)
+              )
             }
           </div>
         </div>

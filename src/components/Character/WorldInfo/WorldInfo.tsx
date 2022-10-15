@@ -33,8 +33,8 @@ const WorldInfo: React.FC<WorldInfoProps> = ({url}) => {
             <WorldData.Skeleton />
           ) : (
             <WorldData
-              name={data?.name}
-              population={Number(data?.population)}
+              name={cachedPlanet?.name || data?.name}
+              population={Number(cachedPlanet?.population || data?.population)}
             />
           )}
         </div>

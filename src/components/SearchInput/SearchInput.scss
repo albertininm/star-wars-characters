@@ -1,0 +1,16 @@
+@import "../../globals.scss";
+
+.search-input {
+  background: $gray-000;
+  border-radius: 8px;
+  font-size: $font-super-large;
+  outline: $gray-500 auto 1px;
+  padding: 8px 6px;
+
+  transition: outline 0.3s ease-in-out, background 0.3s ease-in-out;
+  
+  &:focus-visible {
+    background: $gray-200;
+    outline: $gray-900 auto 1px;
+  }
+}

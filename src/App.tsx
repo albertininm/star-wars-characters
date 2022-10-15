@@ -7,7 +7,8 @@ import './globals.scss';
 import { useFetchPeople } from './hooks';
 import { People } from 'types';
 import SearchInput from 'components/SearchInput/SearchInput';
-import Spinner from 'components/Spinner/Spinner';
+import AppBackground from 'components/AppBackground/AppBackground';
+import LoadingCharactersPlaceholder from 'components/LoadingCharactersPlaceholder/LoadingCharactersPlaceholder';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="background"  />
+      <AppBackground />
       <div className="app-layout">
         <div className="app-content">
           <div className="character-search">
@@ -33,10 +34,7 @@ function App() {
 
           <div className="characters-wrapper">
             {loading? 
-              <h1 className="characters-wrapper__placeholder">
-                <Spinner />
-                <p>Loading...</p>
-              </h1>
+              <LoadingCharactersPlaceholder />
               :
               characters.map(character => 
                 <Character
@@ -46,10 +44,8 @@ function App() {
                   onClick={() => setSelectedCharacter(character)}
                   speciesUrls={character.species}
                 />)
-
             }
           </div>
-
         </div>
       </div>
     </div>

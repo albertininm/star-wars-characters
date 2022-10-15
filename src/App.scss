@@ -8,18 +8,6 @@ body {
     display: flex;
     overflow: hidden;
     justify-content: center;
-    
-    .background {
-      position: absolute;
-      background: #000;
-      z-index: 0;
-      height: 100%;
-      width: 100%;
-
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
 
     .app-layout {
       padding: 12px 30px;
@@ -63,21 +51,6 @@ body {
               background: $gray-700;
             }
           }
-
-          .characters-wrapper__placeholder {
-            color: $gray-300;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          
-        }
-
-        .loading-title {
-          color: $gray-300;
-          margin: 0;
-          padding: 0;
         }
       }
     }

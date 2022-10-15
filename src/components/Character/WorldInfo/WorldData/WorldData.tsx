@@ -1,8 +1,9 @@
 import ParagraphSkeleton from 'components/ParagraphSkeleton/ParagraphSkeleton';
-import { Colors, getColorFromText } from 'helpers/colors';
+import { getColorFromText } from 'helpers/colors';
 import React from 'react';
 import cx from 'classnames';
 import Globe from 'components/Globe/Globe';
+import './WorldData.scss';
 
 const WorldDataSkeleton: React.FC = () => (
   <>

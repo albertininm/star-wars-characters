@@ -1,0 +1,25 @@
+@import '../WorldInfo.scss';
+
+.world-data {
+  max-width: 100%;
+
+  .name-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .world-name {
+      color: $gray-300;
+      font-size: $font-medium;
+      font-weight: $fw-bold;
+      margin-left: 6px;
+    }
+  }
+  
+  .world-population {
+    margin-top: 1px;
+    margin-left: 6px;
+    color: $gray-600;
+    font-size: $font-small-normal;
+  }
+}

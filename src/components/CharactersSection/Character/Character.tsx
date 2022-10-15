@@ -1,6 +1,6 @@
 import React, { MouseEventHandler } from 'react';
 import './Character.scss';
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../../Avatar/Avatar';
 import WorldInfo from './WorldInfo/WorldInfo';
 import SpeciesInfo from './SpeciesInfo/SpeciesInfo';
 

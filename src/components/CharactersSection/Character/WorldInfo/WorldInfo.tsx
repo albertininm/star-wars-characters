@@ -1,4 +1,4 @@
-import useDataContext from '../../../contexts/CacheContext/useCacheContext';
+import useDataContext from '../../../../contexts/CacheContext/useCacheContext';
 import { useFetch } from 'hooks';
 import React from 'react';
 import { Planet } from 'types';

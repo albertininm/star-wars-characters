@@ -1,4 +1,4 @@
-@import '../Movie.scss';
+@import '../MovieItem.scss';
 
 .release-info {
   display: flex;
@@ -6,14 +6,14 @@
   justify-content: center;
 
   .release-info__title {
-    font-size: $font-small-normal;
+    font-size: $font-normal;
     color: $gray-500;
   }
   
   .release-info__date {
     color: $gray-200;
-    font-weight: $fw-medium;
-    font-size: $font-normal;
+    font-weight: $fw-semibold;
+    font-size: $font-medium-large;
     white-space: nowrap;
   }
 }

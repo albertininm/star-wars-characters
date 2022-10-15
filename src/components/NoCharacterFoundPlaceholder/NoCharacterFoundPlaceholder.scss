@@ -1,0 +1,22 @@
+@import "../../globals.scss";
+
+.empty-search-result-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .title {
+    color: $gray-300;
+    font-size: $font-super-large;
+    margin: 0;
+    padding: 0;
+  }
+
+  .description {
+    color: $gray-600;
+    font-size: $font-medium-large;
+    margin-top: 8px;
+  }
+}

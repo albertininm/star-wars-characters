@@ -16,7 +16,14 @@ function App() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const {loading: loadingMovies, fetchMovies} = useFetchMovies();
 
-  const { results: characters = [], loading: loadingCharacters } = useFetchPeople(inputText);
+  const {
+    results: characters = [],
+    loading: loadingCharacters,
+    hasNextPage,
+    hasPreviousPage,
+    fetchNextPage,
+    fetchPreviousPage,
+  } = useFetchPeople(inputText);
   const [selectedCharacter, setSelectedCharacter] = useState<People>();
 
   return (
@@ -40,6 +47,10 @@ function App() {
               setMovies([]);
             }}
             selectedCharacter={selectedCharacter}
+            hasNextPage={hasNextPage}
+            hasPreviousPage={hasPreviousPage}
+            fetchNextPage={fetchNextPage}
+            fetchPreviousPage={fetchPreviousPage}
           />
           <MoviesSection
             characters={characters}

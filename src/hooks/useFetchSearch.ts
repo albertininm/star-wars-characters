@@ -41,7 +41,34 @@ const useFetch = <ResultType>(url: string) => {
     };
   }, [url]);
 
-  return { error, loading, nextUrl, previousUrl, results, total };
+  const fetchPage = async (url: string) => {
+    setLoading(true);
+
+    try {
+      const response = await fetch(url, {signal: abortController.current.signal});
+      const { results, next, previous, total } = await response.json();
+
+      setResults(results);
+      setNextUrl(next);
+      setPreviousUrl(previous);
+      setTotal(total);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return {
+    error,
+    loading,
+    results,
+    total,
+    fetchNextPage: () => fetchPage(nextUrl),
+    fetchPreviousPage: () => fetchPage(previousUrl),
+    hasNextPage: Boolean(nextUrl),
+    hasPreviousPage: Boolean(previousUrl),
+  };
 };
 
 export default useFetch;

@@ -4,16 +4,13 @@ import React, { useState } from 'react';
 import { Movie } from 'types';
 import './MoviesSection.scss';
 import { sortMovies } from 'helpers/movies';
-import Badge from 'components/Badge/Badge';
-import cx from 'classnames';
+import SortSelector, { SortType } from './SortSelector/SortSelector';
 
 interface MoviesSectionProps {
   movies: Movie[];
   skeleton?: boolean;
   skeletonNumberOfItems?: number;
 }
-
-export type SortType = 'newest' | 'oldest';
 
 const MoviesSection: React.FC<MoviesSectionProps> = ({movies, skeleton, skeletonNumberOfItems}) => {
   const [sortType, setSortType] = useState<SortType>('newest');
@@ -25,11 +22,14 @@ const MoviesSection: React.FC<MoviesSectionProps> = ({movies, skeleton, skeleton
     <div className="movies-section">
       <div className="movies-section-header">
         <h1 className="section-title">Select a character to see the list of films it participated</h1>
-        <div className="sort-selector">
-          <span>Sorted by</span>
-          <Badge className={cx('newest', {'selected': sortType === 'newest'})} content={'Newest'} color="gray" onClick={() => setSortType('newest')} />
-          <Badge className={cx('oldest',{'selected': sortType === 'oldest'})} content={'Oldest'} color="gray" onClick={() => setSortType('oldest')} /> 
-        </div>
+    
+        {movies.length > 0 ?  
+          <SortSelector
+            selectedSortType={sortType}
+            onNewestSelected={() => setSortType('newest')}
+            onOldestSelected={() => setSortType('oldest')}
+          />
+          : null}
       </div>
 
       <div className="movies-section-body">

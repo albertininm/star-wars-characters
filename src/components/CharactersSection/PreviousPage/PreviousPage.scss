@@ -1,0 +1,24 @@
+@import '../../../globals.scss';
+
+.previous-page {
+  min-width: 130px;
+  
+  .previous-page__action {
+    cursor: pointer;
+    color: $gray-300;
+    font-size: $font-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    transition: color 0.2s ease-in-out;
+
+    .icon {
+      font-size: $font-super-large;
+    }
+
+    &:hover {
+      color: $gray-800;
+    }
+  }
+}

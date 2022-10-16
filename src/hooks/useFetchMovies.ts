@@ -36,7 +36,7 @@ const useFetchMovies = () => {
       // Update cache
       responsesData.forEach(movie => setMovie({url: movie.url, movie}));
 
-      moviesToReturn.concat(responsesData);
+      moviesToReturn.push(...responsesData);
     } catch(error) {
       setError(error);
     } finally {

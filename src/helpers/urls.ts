@@ -1,6 +1,6 @@
 import config from '../config/app.config';
 
-type Collections = 'people' | 'movie' | 'planet' | 'specie';
+export type Collections = 'people' | 'movie' | 'planet' | 'specie';
 
 export const apiUrls: Record<Collections, (id: string) => string> = {
   people: (peopleId) => `${config.baseApiEndpoint}/people/?search=${peopleId}`,

@@ -5,5 +5,5 @@ export const getInitialsFromName = (name: string) => {
 };
 
 export const getFormattedSynopsis = (synopsis: string) => {
-  return synopsis.replace(/(\r\n|\n|\r)/gm, '').split('').slice(0, 151).join('');
+  return synopsis.replace(/(\r\n|\n|\r)/gm, ' ').split('').slice(0, 151).join('') + '...';
 };

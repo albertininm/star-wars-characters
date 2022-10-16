@@ -44,6 +44,7 @@ function App() {
           <MoviesSection
             characters={characters}
             movies={movies}
+            selectedCharacter={selectedCharacter}
             skeleton={loadingMovies}
           />
         </div>

@@ -35,6 +35,15 @@ function App() {
             characters={characters}
             loading={loadingCharacters}
             onCharacterClick={async (character: People) => {
+              const isCharacterAlreadySelected = character.name === selectedCharacter?.name;
+              
+              if(isCharacterAlreadySelected) {
+                setSelectedCharacter(undefined);
+                setMovies([]);
+
+                return;
+              }
+
               setSelectedCharacter(character);
               const fetchedMovies = await fetchMovies(character.films);
               setMovies(fetchedMovies);

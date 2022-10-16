@@ -1,0 +1,22 @@
+@import "../MoviesSection.scss";
+
+.sort-selector {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $gray-500;
+  font-size: $font-medium;
+  font-weight: $fw-semibold;
+  margin-top: 12px;
+  white-space: nowrap;
+  
+  .badge {
+    background: none;
+    margin-left: 4px;
+
+    &.selected {
+      background: $gray-600;
+    }
+  }
+}

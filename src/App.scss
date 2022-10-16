@@ -38,13 +38,13 @@ body {
               margin: 0;
               padding: 0;
               color: $app-yellow;
-              font-size: $font-super-large;
+              font-size: $font-app-head;
             }
 
             .subtitle {
               margin: 0;
               padding: 0;
-              color: rgba($app-yellow, 0.5);
+              color: rgba($app-yellow, 0.4);
               font-size: $font-large;
             }
           }

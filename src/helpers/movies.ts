@@ -1,5 +1,5 @@
+import { SortType } from 'components/MoviesSection/SortSelector/SortSelector';
 import {Movie} from 'types';
-import {SortType} from 'components/MoviesSection/MoviesSection';
 
 export const sortMovies = ({movies, sortType = 'newest'}: {movies: Movie[]; sortType?: SortType}) => {
   movies.sort((m1, m2) => {

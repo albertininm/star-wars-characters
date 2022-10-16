@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: start;
     transition: color 0.2s ease-in-out;
+    scroll-snap-align: center;
 
     .icon {
       font-size: $font-super-large;

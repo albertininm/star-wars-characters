@@ -1,4 +1,4 @@
-import Character from 'components/Character/Character';
+import Character from 'components/CharactersSection/Character/Character';
 import NoCharacterFoundPlaceholder from 'components/NoCharacterFoundPlaceholder/NoCharacterFoundPlaceholder';
 import React, { MouseEventHandler } from 'react';
 import { People } from 'types';

@@ -1,3 +1,3 @@
 export default {
-  baseApiEndpoint: 'https://swapi.dev/api',
+  baseApiEndpoint: process.env.API_ENDPOINT || 'https://swapi.dev/api',
 };

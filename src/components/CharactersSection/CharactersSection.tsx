@@ -4,15 +4,17 @@ import SearchInput from 'components/SearchInput/SearchInput';
 import LoadingCharactersPlaceholder from 'components/LoadingContentPlaceholder/LoadingContentPlaceholder';
 import React from 'react';
 import { People } from 'types';
+import cx from 'classnames';
 
 interface CharactersSectionProps {
   characters: People[];
   loading: boolean;
+  selectedCharacter?: People;
   onCharacterClick: (character: People) => void;
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const CharactersSection: React.FC<CharactersSectionProps> = ({characters = [], onCharacterClick, onInputChange, loading}) =>  (
+const CharactersSection: React.FC<CharactersSectionProps> = ({characters = [], onCharacterClick, onInputChange, loading, selectedCharacter}) => (
   <div className="characters-section">
     <div className="section-title">
       <h1 className="title">Star Wars</h1>
@@ -30,6 +32,7 @@ const CharactersSection: React.FC<CharactersSectionProps> = ({characters = [], o
         (characters.length === 0 ? <NoCharacterFoundPlaceholder /> :
           characters.map(character => 
             <Character
+              className={cx({'selected': character.name === selectedCharacter?.name})}
               key={character.name}
               name={character.name}
               homeWorldUrl={character.homeworld}

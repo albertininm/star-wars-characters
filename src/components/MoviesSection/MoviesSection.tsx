@@ -1,20 +1,23 @@
 import MovieItem from 'components/MoviesSection/MovieItem/MovieItem';
 import LoadingContentPlaceholder from 'components/LoadingContentPlaceholder/LoadingContentPlaceholder';
 import React, { useState } from 'react';
-import { Movie } from 'types';
+import { Movie, People } from 'types';
 import './MoviesSection.scss';
 import { sortMovies } from 'helpers/movies';
 import SortSelector, { SortType } from './SortSelector/SortSelector';
 
 interface MoviesSectionProps {
+  characters: People[];
   movies: Movie[];
   skeleton?: boolean;
-  skeletonNumberOfItems?: number;
 }
 
-const MoviesSection: React.FC<MoviesSectionProps> = ({movies, skeleton, skeletonNumberOfItems}) => {
+const MoviesSection: React.FC<MoviesSectionProps> = ({characters, movies, skeleton}) => {
   const [sortType, setSortType] = useState<SortType>('newest');
 
+  if(characters.length === 0) {
+    return null;
+  }
 
   sortMovies({movies, sortType});
 

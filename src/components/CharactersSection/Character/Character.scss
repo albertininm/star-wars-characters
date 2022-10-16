@@ -27,6 +27,11 @@
     margin-left: 16px;
   }
 
+  &.selected {
+    background: $gray-800;
+    outline: 5px solid rgba($app-yellow, 0.7);
+  }
+
   .avatar {
     color: $gray-800;
   }

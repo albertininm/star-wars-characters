@@ -6,12 +6,12 @@
   background-image: linear-gradient(to bottom right, $gray-800, $gray-default);
   display: inline-flex;
   flex-direction: column;
-  height: 180px;
-  min-height: 180px;
-  min-width: 260px;
-  padding: 6px 12px;
+  height: 225px;
+  min-height: 225px;
+  min-width: 330px;
+  width: 330px;
+  padding: 8px 12px;
   position: relative;
-  width: 260px;
   z-index: 1;
 
   .release-year {
@@ -46,11 +46,11 @@
     justify-content: space-between;
     
     .synopsis {
-      max-width: 50%;
+      max-width: 55%;
       font-size: 9px;
       color: $gray-100;
       font-weight: $fw-normal;
-      font-size: $font-small-normal;
+      font-size: $font-medium;
       text-align: justify;
       margin: 0;
       padding: 0;

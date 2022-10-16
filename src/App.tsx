@@ -39,11 +39,12 @@ function App() {
               setSelectedCharacter(undefined);
               setMovies([]);
             }}
+            selectedCharacter={selectedCharacter}
           />
           <MoviesSection
+            characters={characters}
             movies={movies}
             skeleton={loadingMovies}
-            skeletonNumberOfItems={selectedCharacter?.films.length ?? 0}
           />
         </div>
       </div>

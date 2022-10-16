@@ -17,7 +17,7 @@ body {
 
       .app-content {
         justify-content: center;
-        width: 100%;
+        padding: 0 200px;
         z-index: 1;
         
         .characters-section {
@@ -32,20 +32,21 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
             
             
             .title {
               margin: 0;
               padding: 0;
-              color: $app-yellow;
+              -webkit-text-stroke: 2px rgba($app-yellow, 0.8);
               font-size: $font-app-head;
             }
 
             .subtitle {
+              color: rgba($app-yellow, 0.5);
+              font-size: $font-large;
               margin: 0;
               padding: 0;
-              color: rgba($app-yellow, 0.4);
-              font-size: $font-large;
             }
           }
 
@@ -62,7 +63,7 @@ body {
             overflow-x: auto;
             border-radius: 8px;
             padding: 10px 5px;
-            max-width: 1000px;
+            width: 100%;
             
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;

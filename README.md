@@ -1,4 +1,4 @@
-# Star Wars - Character Wiki
+# [Star Wars - Character Wiki](https://albertininm.github.io/star-wars-characters/)
 The purpose of this app is to show information about Star Wars characters:
 - Name
 - Species

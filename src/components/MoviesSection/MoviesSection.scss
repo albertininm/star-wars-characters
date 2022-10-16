@@ -1,4 +1,46 @@
-.movie-list {
+@import '../../globals.scss';
 
+.movies-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 60px;
+  padding: 0 180px;
+  
+  .movies-section-header {
+    .section-title {
+      margin: 0;
+      padding: 0;
+      color: $gray-300
+    }
 
+    .sort-selector {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: $gray-500;
+      font-size: $font-medium;
+      font-weight: $fw-semibold;
+      margin-top: 12px;
+      white-space: nowrap;
+      
+      .badge {
+        background: none;
+        margin-left: 4px;
+
+        &.selected {
+          background: $gray-600;
+        }
+      }
+    }
+  }
+
+  .movies-section-body {
+    .movie-list {
+      width: 100%;
+      float: left;
+    }
+  }
 }

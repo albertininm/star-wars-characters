@@ -3,16 +3,16 @@
 .movie-item {
   border-radius: 8px;
   border: 1px solid $gray-600;
-  position: relative;
-  background-image: linear-gradient(to bottom right, $gray-900, $gray-default);
-  padding: 6px 12px;
-  height: 180px;
-  width: 260px;
-
-  z-index: 1;
-
-  display: flex;
+  background-image: linear-gradient(to bottom right, $gray-800, $gray-default);
+  display: inline-flex;
   flex-direction: column;
+  height: 180px;
+  min-height: 180px;
+  min-width: 260px;
+  padding: 6px 12px;
+  position: relative;
+  width: 260px;
+  z-index: 1;
 
   .release-year {
     position: absolute;
@@ -21,7 +21,7 @@
     font-size: 72px;
     line-height: 56px;
     font-weight: $fw-bold;
-    color: rgba($app-yellow, 0.2);
+    color: rgba($app-yellow, 0.15);
     z-index: 2;
   }
 
@@ -48,7 +48,7 @@
     .synopsis {
       max-width: 50%;
       font-size: 9px;
-      color: $gray-500;
+      color: $gray-100;
       font-weight: $fw-normal;
       font-size: $font-small-normal;
       text-align: justify;

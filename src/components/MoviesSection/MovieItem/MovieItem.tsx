@@ -1,4 +1,5 @@
 import { getFormattedDate } from 'helpers/date';
+import { getFormattedSynopsis } from 'helpers/string';
 import React from 'react';
 import './MovieItem.scss';
 import ReleaseDate from './ReleaseDate/ReleaseDate';
@@ -11,6 +12,7 @@ interface MovieItemProps {
 
 const MovieItem: React.FC<MovieItemProps> = ({releaseDate, synopsis, title}) => {
   const {date, year} = getFormattedDate(releaseDate);
+  const formattedSynopsis = getFormattedSynopsis(synopsis);
 
   return (
     <div className="movie-item">
@@ -18,7 +20,7 @@ const MovieItem: React.FC<MovieItemProps> = ({releaseDate, synopsis, title}) => 
       <h4 className="title">{title}</h4>
       <div className="details">
         <ReleaseDate date={date} />
-        <p className="synopsis">{synopsis}</p>
+        <p className="synopsis">{formattedSynopsis}</p>
       </div>
     </div>
   );

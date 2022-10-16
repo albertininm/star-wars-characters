@@ -5,6 +5,7 @@
   border: 1px solid $gray-600;
   border-radius: 40px;
   color: $gray-300;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +14,7 @@
   min-height: 14px;
   max-width: 100%;
   padding: 0 6px;
+  transition: background 0.3s ease-in-out;
 
   .content {
     max-width: 100%;

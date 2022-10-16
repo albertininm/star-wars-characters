@@ -7,6 +7,7 @@ import { People } from 'types';
 import cx from 'classnames';
 import PreviousPage from './PreviousPage/PreviousPage';
 import NextPage from './NextPage/NextPage';
+import './CharactersSection.scss';
 
 interface CharactersSectionProps {
   characters: People[];

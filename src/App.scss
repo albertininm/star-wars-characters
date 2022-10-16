@@ -10,45 +10,77 @@ body {
     justify-content: center;
 
     .app-layout {
-      padding: 12px 30px;
+      background: #000;
+      padding: 12px 0;
       position: absolute;
+      width: 100%;
 
       .app-content {
         justify-content: center;
+        width: 100%;
         z-index: 1;
-
-        .character-search {
+        
+        .characters-section {
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-        }
-        
-        .characters-wrapper {
-          align-items: center;
-          display: flex;          
-          overflow-x: auto;
-          margin-top: 30px;
-          border-radius: 8px;
-          // background: $gray-900;
-          padding: 10px 5px;
-          max-width: 1000px;
+          width: 100%;
           
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
+          .section-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            
+            .title {
+              margin: 0;
+              padding: 0;
+              color: $app-yellow;
+              font-size: $font-super-large;
+            }
 
-          z-index: 1;
+            .subtitle {
+              margin: 0;
+              padding: 0;
+              color: rgba($app-yellow, 0.5);
+              font-size: $font-large;
+            }
+          }
 
-          &::-webkit-scrollbar {
-            height: 8px;
+          .character-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
           }
           
-          &::-webkit-scrollbar-thumb {
-            width: 2px;
-            background: $gray-200; 
-            border-radius: 10px;
-
-            &:hover {
-              background: $gray-700;
+          .characters-wrapper {
+            align-items: center;
+            display: flex;
+            overflow-x: auto;
+            border-radius: 8px;
+            padding: 10px 5px;
+            max-width: 1000px;
+            
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+  
+            z-index: 1;
+  
+            &::-webkit-scrollbar {
+              height: 8px;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+              width: 2px;
+              background: $gray-200; 
+              border-radius: 10px;
+  
+              &:hover {
+                background: $gray-700;
+              }
             }
           }
         }

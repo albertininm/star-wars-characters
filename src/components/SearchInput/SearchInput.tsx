@@ -10,6 +10,7 @@ const SearchInput: React.FC<SearchInput> = ({onChange}) => {
     <input
       className="search-input"
       onChange={onChange}
+      placeholder="Search character"
       type="text"
     />
   );

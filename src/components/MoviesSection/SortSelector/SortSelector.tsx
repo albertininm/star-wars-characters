@@ -13,7 +13,7 @@ interface SortSelectorProps {
 
 const SortSelector: React.FC<SortSelectorProps> = ({selectedSortType, onNewestSelected, onOldestSelected}) => {
   return (
-    <div className="sort-selector">
+    <div className="sort-selector" title="sort selection">
       <span>Sorted by</span>
       <Badge className={cx('newest', {'selected': selectedSortType === 'newest'})} content={'Newest'} color="gray" onClick={onNewestSelected} />
       <Badge className={cx('oldest',{'selected': selectedSortType === 'oldest'})} content={'Oldest'} color="gray" onClick={onOldestSelected} /> 

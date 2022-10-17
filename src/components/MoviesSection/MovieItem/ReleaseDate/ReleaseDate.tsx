@@ -7,9 +7,9 @@ interface ReleaseDateProps {
 
 const ReleaseDate: React.FC<ReleaseDateProps> = ({date}) => {
   return (
-    <div className="release-info">
+    <div className="release-info" title="released date">
       <div className="release-info__title">
-        <i className="fa-regular fa-calendar-days" /> Release date
+        <i className="fa-regular fa-calendar-days" aria-label="calendar icon" /> Release date
       </div>
       <div className="release-info__date">{date}</div>
     </div>

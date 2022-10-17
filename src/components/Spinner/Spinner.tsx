@@ -9,7 +9,7 @@ interface SpinnerProps {
 const Spinner: React.FC<SpinnerProps> = ({className}) => {
   const classes = cx('spinner', className);
 
-  return <div className={classes}></div>;
+  return <div className={classes} title="loading..."></div>;
 };
 
 export default Spinner;

@@ -14,7 +14,7 @@ interface ParagraphSkeleton {
 const ParagraphSkeleton: React.FC<ParagraphSkeleton> = ({className, variation = 'medium', width = 30, style}) => {
   const classes = cx('paragraph-skeleton', className, variation);
 
-  return <div className={classes} style={{width, ...style}}/>;
+  return <div className={classes} aria-label="loading..." style={{width, ...style}}/>;
 };
 
 export default ParagraphSkeleton;

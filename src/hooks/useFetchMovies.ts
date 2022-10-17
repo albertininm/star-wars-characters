@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Movie } from 'types';
 import useDataContext from 'contexts/CacheContext/useCacheContext';
 
@@ -10,7 +10,12 @@ const useFetchMovies = () => {
 
   const {movies, setMovie} = useDataContext();
 
+  const requestController = useRef(new AbortController());
+
   const fetchMovies = async (urls: string[]) => {
+    requestController.current.abort();
+    requestController.current = new AbortController();
+
     const moviesToReturn: Movie[] = [];
 
     const notCachedMoviesRequests = urls.filter(url => {
@@ -21,7 +26,7 @@ const useFetchMovies = () => {
       }
 
       return true;
-    }).map(url => fetch(url));
+    }).map(url => fetch(url, {signal: requestController.current.signal}));
 
     if(notCachedMoviesRequests.length === 0) {
       return moviesToReturn;

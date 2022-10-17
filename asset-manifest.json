@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/star-wars-characters/static/css/main.35e1cdd7.css",
-    "main.js": "/star-wars-characters/static/js/main.a473f65b.js",
+    "main.js": "/star-wars-characters/static/js/main.65919b92.js",
     "index.html": "/star-wars-characters/index.html",
     "main.35e1cdd7.css.map": "/star-wars-characters/static/css/main.35e1cdd7.css.map",
-    "main.a473f65b.js.map": "/star-wars-characters/static/js/main.a473f65b.js.map"
+    "main.65919b92.js.map": "/star-wars-characters/static/js/main.65919b92.js.map"
   },
   "entrypoints": [
     "static/css/main.35e1cdd7.css",
-    "static/js/main.a473f65b.js"
+    "static/js/main.65919b92.js"
   ]
 }

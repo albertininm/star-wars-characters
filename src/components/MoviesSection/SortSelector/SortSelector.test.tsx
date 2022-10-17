@@ -37,7 +37,7 @@ describe('Components: MoviesSection/SortSelector', () => {
   });
 
   it('should select "oldest" when clicking on it', async () => {  
-    const {rerender} = render(
+    render(
       <SortSelector
         selectedSortType="newest"
         onNewestSelected={onNewestSelected}

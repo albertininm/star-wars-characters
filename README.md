@@ -28,5 +28,5 @@ When clicking on a character from the list, the app lists all movies that the se
 Run `yarn install && yarn build && yarn start` to see the APP running on `localhost:3000` in your machine.
 
 
-TODO:
-- tests
+TO DO:
+- Tests for missing hooks/components

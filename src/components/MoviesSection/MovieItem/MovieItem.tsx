@@ -15,7 +15,7 @@ const MovieItem: React.FC<MovieItemProps> = ({releaseDate, synopsis, title}) => 
   const formattedSynopsis = getFormattedSynopsis(synopsis);
 
   return (
-    <div className="movie-item">
+    <div className="movie-item" title="movie information">
       <div className="release-year">{year}</div>
       <h4 className="title">{title}</h4>
       <div className="details">

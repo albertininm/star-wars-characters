@@ -8,7 +8,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test:unit": "jest --runInBand --config \"./jest.config.js\"",
+    "test:unit": "jest --runInBand --config \"./jest.config.js\" --verbose",
     "eject": "react-scripts eject",
     "lint": "eslint src -c .eslintrc.json --ext .ts,.tsx --fix"
   },

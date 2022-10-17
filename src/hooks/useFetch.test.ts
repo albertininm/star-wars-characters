@@ -50,7 +50,7 @@ describe('Hooks: useFetch', () => {
     });
   });
 
-  it('should not run request if "skip" is "true"', async () => {
+  it('should not run request if "skip" is "true"', () => {
     const url = 'https://challenger.api';
 
     fetchMock.mockReturnValue(new Promise((resolve) => resolve));

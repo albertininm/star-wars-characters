@@ -19,7 +19,7 @@ export const CacheContext = React.createContext<CacheContextInterface>({
   setPlanet: () => null,
 });
 
-const CacheContextProvider: React.FC<PropsWithChildren> = ({children}) => {
+const CacheContextProvider: React.FC<PropsWithChildren<unknown>> = ({children}) => {
   const [species, setSpecies] = useState<Record<string, Specie | undefined>>({});
   const [movies, setMovies] = useState<Record<string, Movie | undefined>>({});
   const [planets, setPlanets] = useState<Record<string, Planet | undefined>>({});
